@@ -3,6 +3,7 @@
 The class of a rectangle that does nothing
 """
 
+
 class Rectangle:
     """The rectangle class"""
     def __init__(self, width=0, height=0):
