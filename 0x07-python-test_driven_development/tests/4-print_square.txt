@@ -44,10 +44,19 @@ Test Case #5: Testing a float
 	TypeError: size must be an integer
 
 Test Case #6: Testing with undfined variable
-	>>> print_square('a')
+	>>> print_square(a)
 	Traceback (most recent call last):
-	TypeError: size must be an integer
+	NameError: name 'a' is not defined
 
 Test Case #7: Testing with zero
 	>>> print_square(0)
 
+Test Case #8: Testing infinity float
+	>>> print_square(5e9999)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case #9: Testing with a string
+	>>> print_square('not a square')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
