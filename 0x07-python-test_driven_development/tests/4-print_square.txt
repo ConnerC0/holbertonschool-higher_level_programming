@@ -1,0 +1,53 @@
+============================
+.4 The Print Square Module
+============================
+
+Using ''print_square''
+----------------------
+
+Import Module:
+==============
+	>>> print_square = __import__('4-print_square').print_square
+
+Test Cases:
+===========
+
+Test Case #0: Testing without parameters
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+Test Case #1: Testing normal case
+	>>> print_square(3)
+	###
+	###
+	###
+
+Test Case #2: Testing None argument
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case #3: Testing multiple arguments
+	>>> print_square(1, 2)
+	Traceback (most recent call last):
+	TypeError: print_square() takes 1 positional argument but 2 were given
+
+Test Case #4: Testing with a negative
+	>>> print_square(-5)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Test Case #5: Testing a float
+	>>> print_square(3.2)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case #6: Testing with undfined variable
+	>>> print_square('a')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Test Case #7: Testing with zero
+	>>> print_square(0)
+
