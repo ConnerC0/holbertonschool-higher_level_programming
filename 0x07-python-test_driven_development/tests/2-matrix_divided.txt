@@ -1,0 +1,94 @@
+===============================
+2. The Matrix Division Module
+===============================
+
+Using ''matrix_divided''
+------------------------
+
+Import Module:
+==============
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test Cases:
+===========
+
+Test Case #0: Testing without paramaters
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test Case #1: Testing with integer elements and div
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test Case #2: Testing with float and negative elements and float div
+	>>> matrix = [[1.0, 2.0, 3.0]], [-4.0, -5.0, -6.0]]
+	>>> matrix_divided(matrix, 3.0)
+	[[0.33, 0.67, 1.0], [-1.33, -1.67, -2.0]]
+
+Test Case #3: Testing invalid item types
+	>>> matrix = [["one", "two", "!"], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test Case #4: Testing row lengths
+	>>> matrix = [[1 ,2], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+Test Case #5: Testing div type
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, "three")
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+Test Case #6: testing div value
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+Test Case #7: testing a negative div
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, -3)
+	[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+Test Case #8: Testing with infinities
+	>>> matrix = [[1e9999, 2e9999, 3e9999], [4e9999, 5e9999, 6e9999]]
+	>>> matrix_divided(matrix, 3)
+	[[inf, inf, inf], [inf, inf, inf]]
+
+Test Case #9: Testing an empty Matrix
+	>>> matrix = [[]]
+	>>> matrix_divided(matrix, 3)
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test Case #10: Testing matrix of None
+	>>> matrix = None
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	TypeError: 'NoneType' object is not subscriptable
+
+Test Case #11: Testing a case with the type of value returned
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> type(matrix_divided(matrix, 3))
+	<class 'list'>
+
+Test Case #12: Testing a NaN div
+	>>> matrix = [[1, 2, 7.0], [5, 6.5, 8]]
+	>>> matrix_divided(matrix, float('nan'))
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+Test Case #13: Testing None as a div
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, None)
+	TypeError: div must be a number
+
+Test Case #14: Testing a string as a row
+	>>> matrix = [[1, 2, 3], 'Hello']
+	>>> matrix_divided(matrix, 3)
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
