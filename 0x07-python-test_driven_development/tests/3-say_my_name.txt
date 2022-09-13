@@ -24,7 +24,7 @@ Test Case #1: Testing normal case
 
 Test Case #2: Testing only first name
 	>>> say_my_name("Bob")
-	My name is Bob
+	My name is Bob 
 
 Test Case #3: Testing invalid data type
 	>>> say_my_name(2, 3)
@@ -33,11 +33,11 @@ Test Case #3: Testing invalid data type
 
 Test Case #4: Testing case with both args empty
 	>>> say_my_name("", "")
-	My name is
+	My name is  
 
 Test Case #5: Testing with newline args
 	>>> say_my_name('\n', '\n')
-	My name is
+	My name is 
 	<BLANKLINE>
 	<BLANKLINE>
 
@@ -63,4 +63,4 @@ Test Case #9: Testing undefined variable
 
 Test Case #10: Testing with spaces
 	>>> say_my_name(" ", " ")
-	My name is   
+	My name is    
