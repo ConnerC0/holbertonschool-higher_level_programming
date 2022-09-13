@@ -61,4 +61,4 @@ class Rectangle:
         """returns a string representation of a rectangle"""
         wid = str(eval('self.width'))
         hie = str(eval('self.height'))
-        return "Rectangle({}, {}".format(wid, hie)
+        return "Rectangle({}, {})".format(wid, hie)
