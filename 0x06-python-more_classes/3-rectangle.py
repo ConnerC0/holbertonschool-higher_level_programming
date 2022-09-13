@@ -53,9 +53,12 @@ class Rectangle:
         """returns a rectangle in string format"""
         RectangleString = ""
         if self.__width is not 0 and self.__height is not 0:
-            RectangleString += "\n".join("#" * self.__width for j in range(self.__height))
+            RectangleString += "\n".join("#" * self.__width for 
+                                         j in range(self.__height))
         return RectangleString
 
     def __repr__(self):
         """returns a string representation of a rectangle"""
-        return "Rectangle({:d}, {:d}".format(self.__width, self.__height)
+        wid = str(eval('self.width'))
+        hie = str(eval('self.height'))
+        return "Rectangle({:d}, {:d}".format(wid, hie)

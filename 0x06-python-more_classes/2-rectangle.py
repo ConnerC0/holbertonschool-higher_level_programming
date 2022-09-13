@@ -53,5 +53,6 @@ class Rectangle:
         """returns a rectangle in string format"""
         RectangleString = ""
         if self.__width is not 0 and self.__height is not 0:
-            RectangleString += "\n".join("#" * self.__width for j in range(self.__height))
+            RectangleString += "\n".join("#" * self.__width for
+                                         j in range(self.__height))
         return RectangleString
