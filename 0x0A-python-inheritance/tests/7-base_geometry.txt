@@ -1,6 +1,7 @@
 ===============================
 7. Integer validator module
 ===============================
+
 ``BaseGeometry()`` is a class with an `area()` and
 `integer_validator` public instance methods.
 
