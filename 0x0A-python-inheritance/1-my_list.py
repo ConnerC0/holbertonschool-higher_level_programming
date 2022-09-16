@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-A module that prints the list, but sorted (ascending sort)
-"""
+""" task 1 my_list module"""
 
 
 class MyList(list):
