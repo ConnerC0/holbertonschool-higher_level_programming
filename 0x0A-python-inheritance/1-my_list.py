@@ -8,6 +8,8 @@ class MyList(list):
     """
     list extension class
     """
+    def __init__(self):
+        super().__init__()
+
     def print_sorted(self):
-        if issubclass(MyList, list):
-            print(sorted(self))
+        print(sorted(self))
