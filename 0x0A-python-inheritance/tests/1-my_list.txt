@@ -41,4 +41,4 @@ Test Case #4: list containing a string
 Test Case #5: test that my_list.__doc__ prints correctly
 	>>> my_list = MyList()
 	>>> print(my_list.__doc__)
-	 list extension class	
+	 Class that extends the list and sorts	

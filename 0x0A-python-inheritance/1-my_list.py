@@ -6,7 +6,7 @@ A module that prints the list, but sorted (ascending sort)
 
 class MyList(list):
     """
-    list extension class
+    Class that extends the list and sorts
     """
     def __init__(self):
         super().__init__()
