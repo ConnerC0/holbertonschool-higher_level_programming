@@ -2,7 +2,7 @@
 """ task 7 base geometry module """
 
 
-Geometry = __import__('7-base-geometry').BaseGeometry
+Geometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(Geometry):
@@ -11,5 +11,6 @@ class Rectangle(Geometry):
         """ initializer for rectangle class """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+
         self.__width = width
         self.__height = height
