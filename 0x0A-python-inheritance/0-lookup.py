@@ -4,4 +4,5 @@ def lookup(obj):
     function that returns the list of available attributes
     and methods of an object
     """
-    return dir(obj)
+    list_of_atts_and_meths = list(dir(obj))
+    return list_of_atts_and_meths
