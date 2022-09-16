@@ -3,9 +3,7 @@
 
 
 class MyList(list):
-    """
-    Class that extends the list and sorts
-    """
+    """ Class that extends the list and sorts """
     def __init__(self):
         super().__init__()
 
