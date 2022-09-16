@@ -10,6 +10,6 @@ class Rectangle(Geometry):
     def __init__(self, width, height):
         """ initializer for rectangle class """
         self.integer_validator("width", width)
-        self.intger_validator("height", height)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
