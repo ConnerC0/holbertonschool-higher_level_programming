@@ -21,4 +21,4 @@ class Student:
         for a in attrs:
             if a in ClassDict:
                 MethodDict[a] = ClassDict[a]
-        return MethodDict 
+        return MethodDict
