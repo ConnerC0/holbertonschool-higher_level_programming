@@ -56,7 +56,7 @@ class Rectangle(Base):
     def y(self, value):
         """ setter for y value """
         if type(value) is not int:
-            raise TyperError("y must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
