@@ -80,10 +80,9 @@ class Rectangle(Base):
                   self.__x, self.__y, self.__width, self.__height)
         return string
 
-    def display(self)
-    """ displays the rectangle with # """
-	 print("\n" * self.__y, end="")
+    def display(self):
+        """ displays the rectangle with # """
+        print("\n" * self.__y, end="")
         for rows in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
-
