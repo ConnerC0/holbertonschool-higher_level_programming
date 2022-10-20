@@ -5,6 +5,7 @@
 import MySQLdb
 import sys
 
+
 def select_states():
 	"""lists all the states in the table"""
 	db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
@@ -15,7 +16,7 @@ def select_states():
 	cur.execute("SELECT * FROM states ORDER BY id ASC")
 	rows = cur.fetchall()
 	for row in rows:
-		print(row)
+            print(row)
 
 	cur.close()
 	db.close()
