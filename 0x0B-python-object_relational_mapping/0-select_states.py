@@ -7,18 +7,18 @@ import sys
 
 def select_states():
 	"""lists all the states in the table"""
-	conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                               passwd=sys.argv[2], database=sys.argv[3])
+	db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                             passwd=sys.argv[2], database=sys.argv[3])
 
-	cur = conn.cursor()
+	cur = db.cursor()
 
-	cur.execute("SELECT * FROM states ORDER by id ASC")
+	cur.execute("SELECT * FROM states ORDER BY id ASC")
 	rows = cur.fetchall()
 	for row in rows:
 		print(row)
 
 	cur.close()
-	conn.close()
+	db.close()
 
 if __name__ == "__main__":
 	select_states()
