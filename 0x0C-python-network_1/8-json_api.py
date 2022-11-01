@@ -16,9 +16,9 @@ if __name__ == "__main__":
     request = requests.post(site, data={'q': q}).json()
     try:
         if {'id', 'name'} <= request.keys():
-            print('[{id}] {name}'.format(id=request.get('id'), name=request.get('name')))
+            print('[{id}] {name}'.format(id=request.get('id'),
+                                         name=request.get('name')))
         else:
             print('No result')
     except ValueError:
         print('Not a valid JSON')
-
