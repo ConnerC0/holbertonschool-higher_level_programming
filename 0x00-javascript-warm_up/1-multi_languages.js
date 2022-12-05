@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const lang = `C is fun
+
+console.log(`C is fun
 Python is cool
-JavaScript is amazing`;
-console.log(lang);
+JavaScript is amazing`);
